@@ -1,10 +1,14 @@
 from datetime import datetime
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 from . import app
+import json
 
 @app.route("/")
-def home():
-    return render_template("home.html")
+def idp():
+    return jsonify(
+        {
+            "providers": ["Dev01TestObj11.com","Dev01TestObj22.com","Dev01TestObj33.com"],
+        })
 
 @app.route("/about/")
 def about():

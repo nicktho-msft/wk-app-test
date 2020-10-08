@@ -8,6 +8,14 @@ file through Gunicorn; the result is "Attempted relative import in non-package".
 The solution is to provide a simple alternate startup file, like this present
 startup.py, that just imports the app object. You can then just specify
 startup:app in the Gunicorn command.
+
+
+sudo apt-get install python3-venv  # If needed
+python3 -m venv .env
+source .env/bin/activate
+pip install -r requirements.txt
+export set FLASK_APP=hello_app.webapp
+python3 -m flask run
 """
 
 from hello_app.webapp import app

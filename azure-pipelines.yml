@@ -10,8 +10,8 @@ variables:
   # Azure Resource Manager connection created during pipeline creation
   # Application (client) ID: 9c9c5bde-c4e6-4dd4-82ee-bad83a5c98ad
   # Directory (tenant) ID: 72f988bf-86f1-41af-91ab-2d7cd011db47
-  # Object ID:36ff452e-5811-4b6d-8ed6-066aa7e1d1d7
-  azureServiceConnectionId: '9c9c5bde-c4e6-4dd4-82ee-bad83a5c98ad'
+  # Object ID: 36ff452e-5811-4b6d-8ed6-066aa7e1d1d7
+  azureServiceConnectionId: '36ff452e-5811-4b6d-8ed6-066aa7e1d1d7'
   
   # Web app name
   webAppName: 'wk-app-test'

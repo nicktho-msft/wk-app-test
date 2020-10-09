@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: 'de35f6ac-0b9e-4cd3-b4f2-a31f258899d3'
   
   # Web app name
-  webAppName: 'flask-webapp-pipeline'
+  webAppName: 'wk-app-test'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
 
   # Environment name
-  environmentName: 'flask-webapp-pipeline'
+  environmentName: 'wk-app-test'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -39,8 +39,8 @@ stages:
       displayName: 'Use Python $(pythonVersion)'
     
     - script: |
-        python -m venv antenv
-        source antenv/bin/activate
+        python -m venv venv
+        source venv/bin/activate
         python -m pip install --upgrade pip
         pip install setup
         pip install -r requirements.txt
@@ -80,7 +80,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : flask-webapp-pipeline'
+            displayName: 'Deploy Azure Web App : wk-app-test'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)
